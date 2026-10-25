@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CodeNest - learn to code with live mentors and real projects." />
+  <title>CodeNest | Learn. Build. Launch.</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="logo">Code<span>Nest</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact" class="btn btn-small">Get Started</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Project-based learning platform</p>
+          <h1>Learn to code by <span class="grad">building real things</span></h1>
+          <p class="lead">Live mentors, hands-on projects and a portfolio that gets you noticed. Start from zero and ship your first app in 4 weeks.</p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn">Start Free Trial</a>
+            <a href="#courses" class="btn btn-outline">Browse Courses</a>
+          </div>
+          <ul class="stats">
+            <li><strong>12k+</strong><span>Learners</span></li>
+            <li><strong>80+</strong><span>Projects</span></li>
+            <li><strong>4.8</strong><span>Avg. rating</span></li>
+          </ul>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="code-card">
+            <div class="dots"><i></i><i></i><i></i></div>
+            <pre><code><b>const</b> future = <b>await</b> learn({
+  skills: ["HTML", "CSS", "JS"],
+  projects: 4,
+  mentor: <em>true</em>
+});
+<i>// ship it </i></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <h2 class="section-title">Why learners choose CodeNest</h2>
+        <div class="grid cols-3">
+          <article class="card"><div class="icon">&#9889;</div><h3>Hands-on first</h3><p>Every lesson ends with something you build and can show to others.</p></article>
+          <article class="card"><div class="icon">&#128101;</div><h3>Live mentors</h3><p>Get your code reviewed by working developers, not just auto-graded.</p></article>
+          <article class="card"><div class="icon">&#128188;</div><h3>Portfolio ready</h3><p>Finish with deployed projects and a profile recruiters can open.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="courses">
+      <div class="container">
+        <h2 class="section-title">Popular courses</h2>
+        <div class="grid cols-3">
+          <article class="card course"><span class="tag">Beginner</span><h3>Web Basics</h3><p>HTML5, CSS3 and responsive layouts in 2 weeks.</p><a href="#contact" class="link">Enroll &rarr;</a></article>
+          <article class="card course"><span class="tag">Intermediate</span><h3>JavaScript Essentials</h3><p>DOM, events, fetch and local storage with 5 mini apps.</p><a href="#contact" class="link">Enroll &rarr;</a></article>
+          <article class="card course"><span class="tag">Advanced</span><h3>React Dashboards</h3><p>Components, state and charts for real-world dashboards.</p><a href="#contact" class="link">Enroll &rarr;</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="testimonials">
+      <div class="container">
+        <h2 class="section-title">What learners say</h2>
+        <div class="grid cols-3">
+          <blockquote class="card quote">"I built my first responsive site in a week. The mentor feedback was gold."<cite>Aarav, BCA student</cite></blockquote>
+          <blockquote class="card quote">"Projects over theory made everything click for me."<cite>Neha, self-learner</cite></blockquote>
+          <blockquote class="card quote">"My GitHub finally looks like a developer's profile."<cite>Rohan, fresher</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container cta-inner">
+        <h2>Ready to build your first project?</h2>
+        <p>Join free for 7 days. No card needed.</p>
+        <form class="signup" id="signupForm" novalidate>
+          <input type="email" id="email" placeholder="Enter your email" aria-label="Email address" required />
+          <button type="submit" class="btn btn-light">Join Free</button>
+        </form>
+        <p class="form-msg" id="formMsg" role="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> CodeNest. Demo landing page built for the Auspify Frontend Internship (Task 1).</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

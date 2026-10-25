@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <h1>Weather Dashboard</h1>
+      <form id="searchForm" class="search" autocomplete="off">
+        <input id="cityInput" type="text" placeholder="Search city, e.g. Delhi" aria-label="City name" />
+        <button type="submit">Search</button>
+      </form>
+      <div class="controls">
+        <div class="units" role="group" aria-label="Units">
+          <button class="unit active" data-unit="c">&deg;C</button>
+          <button class="unit" data-unit="f">&deg;F</button>
+        </div>
+        <div id="recent" class="recent" aria-label="Recent searches"></div>
+      </div>
+    </header>
+
+    <p id="message" class="message" role="status" hidden></p>
+    <div id="loader" class="loader" hidden><span></span>Loading weather&hellip;</div>
+
+    <section id="dashboard" hidden>
+      <div class="current">
+        <div class="now">
+          <p class="place" id="place"></p>
+          <p class="time" id="updated"></p>
+          <div class="temp-row"><span class="icon" id="icon"></span><span class="temp" id="temp"></span></div>
+          <p class="desc" id="desc"></p>
+        </div>
+        <ul class="details">
+          <li><span>Feels like</span><b id="feels"></b></li>
+          <li><span>Humidity</span><b id="humidity"></b></li>
+          <li><span>Wind</span><b id="wind"></b></li>
+          <li><span>Pressure</span><b id="pressure"></b></li>
+        </ul>
+      </div>
+      <h2 class="sub">5-Day Forecast</h2>
+      <div id="forecast" class="forecast"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

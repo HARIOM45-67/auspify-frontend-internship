@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic To-Do App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-head">
+      <h1>My Tasks</h1>
+      <p id="today" class="date"></p>
+    </header>
+
+    <form id="taskForm" class="add" autocomplete="off">
+      <input id="taskInput" type="text" placeholder="What needs to be done?" maxlength="120" aria-label="New task" />
+      <select id="priority" aria-label="Priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button type="submit" class="add-btn">Add</button>
+    </form>
+    <p id="error" class="error" role="alert"></p>
+
+    <div class="progress-wrap" aria-live="polite">
+      <div class="progress"><div id="progressFill"></div></div>
+      <span id="progressText">0 of 0 done</span>
+    </div>
+
+    <div class="toolbar">
+      <div class="filters" id="filters" role="group" aria-label="Filter tasks">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="active">Active</button>
+        <button class="filter" data-filter="completed">Completed</button>
+      </div>
+      <button id="clearDone" class="link-btn">Clear completed</button>
+    </div>
+
+    <ul id="taskList" class="list" aria-label="Task list"></ul>
+    <p id="empty" class="empty" hidden>No tasks here. Add one above!</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
